@@ -5,7 +5,7 @@
 
 Name: oxygen
 Version: 4.96.0
-Release: 2
+Release: 3
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: The Oxygen style for KDE 5
