@@ -4,9 +4,9 @@
 %define debug_package %{nil}
 
 Name: oxygen
-Version: 4.96.0
-Release: 3
-Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
+Version: 5.0.0
+Release: 1
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/plasma/%{version}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: The Oxygen style for KDE 5
 URL: http://kde.org/
@@ -58,10 +58,16 @@ ninja -C build
 %install
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 
-%files
+%find_lang liboxygenstyleconfig
+%find_lang oxygen_kwin_deco
+%find_lang oxygen_style_config
+%find_lang oxygen_style_demo
+
+cat *.lang >oxygen-all.lang
+
+%files -f oxygen-all.lang
 %{_bindir}/oxygen-demo5
 %{_bindir}/oxygen-settings5
-%{_bindir}/oxygen-shadow-demo5
 %{_datadir}/sounds/Oxygen*
 %{_datadir}/icons/KDE_Classic
 %{_datadir}/icons/Oxygen_Black
