@@ -4,7 +4,7 @@
 %define debug_package %{nil}
 
 Name: oxygen
-Version: 5.0.1
+Version: 5.0.95
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/plasma/%{version}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
@@ -76,6 +76,7 @@ cat *.lang >oxygen-all.lang
 %{_datadir}/icons/Oxygen_Yellow
 %{_datadir}/icons/Oxygen_Zion
 %{_datadir}/kstyle/themes/oxygen.*
+%{_datadir}/plasma/look-and-feel/org.kde.oxygen
 %{_libdir}/plugins/styles/oxygen.so
 %{_libdir}/plugins/kstyle_oxygen_config.so
 %{_libdir}/plugins/kwin/kdecorations/config/kwin_oxygen_config.so
