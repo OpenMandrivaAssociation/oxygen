@@ -3,11 +3,12 @@
 %define clibname %mklibname oxygenstyleconfig%{major} %{major}
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define debug_package %{nil}
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: oxygen
-Version: 5.1.0.1
+Version: 5.1.1
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
+Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: The Oxygen style for KDE 5
 URL: http://kde.org/
