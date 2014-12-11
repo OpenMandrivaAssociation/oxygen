@@ -52,7 +52,8 @@ KDE Frameworks 5 Oxygen configuration framework
 
 %prep
 %setup -q
-%cmake -G Ninja
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
 ninja -C build
@@ -79,10 +80,10 @@ cat *.lang >oxygen-all.lang
 %{_datadir}/icons/Oxygen_Zion
 %{_datadir}/kstyle/themes/oxygen.*
 %{_datadir}/plasma/look-and-feel/org.kde.oxygen
-%{_libdir}/plugins/styles/oxygen.so
-%{_libdir}/plugins/kstyle_oxygen_config.so
-%{_libdir}/plugins/kwin/kdecorations/config/kwin_oxygen_config.so
-%{_libdir}/plugins/kwin/kdecorations/kwin3_oxygen.so
+%{_libdir}/qt5/plugins/styles/oxygen.so
+%{_libdir}/qt5/plugins/kstyle_oxygen_config.so
+%{_libdir}/qt5/plugins/kwin/kdecorations/config/kwin_oxygen_config.so
+%{_libdir}/qt5/plugins/kwin/kdecorations/kwin3_oxygen.so
 
 %files -n %{libname}
 %{_libdir}/liboxygenstyle%{major}.so.%{major}*
