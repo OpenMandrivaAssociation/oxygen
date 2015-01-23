@@ -6,7 +6,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: oxygen
-Version: 5.1.2
+Version: 5.1.95
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
@@ -82,8 +82,6 @@ cat *.lang >oxygen-all.lang
 %{_datadir}/plasma/look-and-feel/org.kde.oxygen
 %{_libdir}/qt5/plugins/styles/oxygen.so
 %{_libdir}/qt5/plugins/kstyle_oxygen_config.so
-%{_libdir}/qt5/plugins/kwin/kdecorations/config/kwin_oxygen_config.so
-%{_libdir}/qt5/plugins/kwin/kdecorations/kwin3_oxygen.so
 
 %files -n %{libname}
 %{_libdir}/liboxygenstyle%{major}.so.%{major}*
