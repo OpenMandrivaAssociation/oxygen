@@ -6,7 +6,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: oxygen
-Version: 5.2.1
+Version: 5.2.2
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
@@ -18,24 +18,24 @@ BuildRequires: cmake
 BuildRequires: qmake5
 BuildRequires: extra-cmake-modules5
 BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5Gui)
+BuildRequires: pkgconfig(Qt5Widgets)
+BuildRequires: pkgconfig(Qt5X11Extras)
+BuildRequires: pkgconfig(xcb)
 BuildRequires: cmake(KF5DocTools)
-BuildRequires: cmake(XCB)
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(Qt5)
 BuildRequires: cmake(KF5)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5Service)
 #BuildRequires: cmake(KDecorations)
-BuildRequires: cmake(XCB)
-BuildRequires: cmake(Qt5)
 BuildRequires: cmake(Gettext)
 BuildRequires: cmake(KF5FrameworkIntegration)
 BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
-The Oxygen style for KDE 5
+The Oxygen style for KDE 5.
 
 %package -n %{libname}
 Summary: KDE Frameworks 5 Oxygen framework
@@ -43,7 +43,7 @@ Group: System/Libraries
 Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
-KDE Frameworks 5 Oxygen framework
+KDE Frameworks 5 Oxygen framework.
 
 %package -n %{clibname}
 Summary: KDE Frameworks 5 Oxygen configuration framework
@@ -51,7 +51,7 @@ Group: System/Libraries
 Requires: %{name} = %{EVRD}
 
 %description -n %{clibname}
-KDE Frameworks 5 Oxygen configuration framework
+KDE Frameworks 5 Oxygen configuration framework.
 
 %prep
 %setup -q
