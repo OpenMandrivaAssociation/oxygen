@@ -25,7 +25,7 @@ BuildRequires: cmake(KF5)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5Service)
-BuildRequires: cmake(KDecorations)
+BuildRequires: cmake(KDecoration2)
 BuildRequires: cmake(Gettext)
 BuildRequires: cmake(KF5FrameworkIntegration)
 Requires: %{libname} = %{EVRD}
