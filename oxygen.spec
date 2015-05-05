@@ -67,6 +67,7 @@ rm -f %{buildroot}%{_libdir}/liboxygenstyleconfig%{major}.so
 %find_lang oxygen_kwin_deco
 %find_lang oxygen_style_config
 %find_lang oxygen_style_demo
+%find_lang oxygen_kdecoration
 
 cat *.lang >oxygen-all.lang
 
@@ -81,9 +82,11 @@ cat *.lang >oxygen-all.lang
 %{_datadir}/icons/Oxygen_Yellow
 %{_datadir}/icons/Oxygen_Zion
 %{_datadir}/kstyle/themes/oxygen.*
+%{_datadir}/kservices5/oxygenstyleconfig.desktop
 %{_datadir}/plasma/look-and-feel/org.kde.oxygen
 %{_libdir}/qt5/plugins/styles/oxygen.so
 %{_libdir}/qt5/plugins/kstyle_oxygen_config.so
+%{_libdir}/qt5/plugins/org.kde.kdecoration2/oxygendecoration.so
 
 %files -n %{libname}
 %{_libdir}/liboxygenstyle%{major}.so.%{major}*
