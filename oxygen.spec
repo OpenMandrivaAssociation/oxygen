@@ -7,7 +7,7 @@
 
 Name: oxygen
 Version: 5.3.2
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: The Oxygen style for KDE 5
