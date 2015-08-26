@@ -28,6 +28,7 @@ BuildRequires: cmake(KF5Service)
 BuildRequires: cmake(KDecoration2)
 BuildRequires: cmake(Gettext)
 BuildRequires: cmake(KF5FrameworkIntegration)
+BuildRequires: cmake(KF5KCMUtils)
 Requires: %{libname} = %{EVRD}
 
 %description
@@ -82,7 +83,7 @@ cat *.lang >oxygen-all.lang
 %{_datadir}/icons/Oxygen_Yellow
 %{_datadir}/icons/Oxygen_Zion
 %{_datadir}/kstyle/themes/oxygen.*
-%{_datadir}/kservices5/oxygenstyleconfig.desktop
+%{_datadir}/kservices5/*.desktop
 %{_datadir}/plasma/look-and-feel/org.kde.oxygen
 %{_libdir}/qt5/plugins/styles/oxygen.so
 %{_libdir}/qt5/plugins/kstyle_oxygen_config.so
