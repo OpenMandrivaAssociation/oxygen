@@ -75,7 +75,7 @@ cat *.lang >oxygen-all.lang
 %files -f oxygen-all.lang
 %{_bindir}/oxygen-demo5
 %{_bindir}/oxygen-settings5
-%{_iconsdir}/Oxygen*
+%{_datadir}/sounds/Oxygen-*.ogg
 %{_iconsdir}/KDE_Classic
 %{_iconsdir}/Oxygen_Black
 %{_iconsdir}/Oxygen_Blue
