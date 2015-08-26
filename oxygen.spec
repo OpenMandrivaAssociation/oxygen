@@ -75,13 +75,14 @@ cat *.lang >oxygen-all.lang
 %files -f oxygen-all.lang
 %{_bindir}/oxygen-demo5
 %{_bindir}/oxygen-settings5
-%{_datadir}/sounds/Oxygen*
-%{_datadir}/icons/KDE_Classic
-%{_datadir}/icons/Oxygen_Black
-%{_datadir}/icons/Oxygen_Blue
-%{_datadir}/icons/Oxygen_White
-%{_datadir}/icons/Oxygen_Yellow
-%{_datadir}/icons/Oxygen_Zion
+%{_iconsdir}/Oxygen*
+%{_iconsdir}/KDE_Classic
+%{_iconsdir}/Oxygen_Black
+%{_iconsdir}/Oxygen_Blue
+%{_iconsdir}/Oxygen_White
+%{_iconsdir}/Oxygen_Yellow
+%{_iconsdir}/Oxygen_Zion
+%{_iconsdir}/hicolor/*/apps/oxygen-settings.png
 %{_datadir}/kstyle/themes/oxygen.*
 %{_datadir}/kservices5/*.desktop
 %{_datadir}/plasma/look-and-feel/org.kde.oxygen
