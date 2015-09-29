@@ -7,7 +7,7 @@
 
 Name: oxygen
 Version: 5.4.1
-Release: 3
+Release: 4
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: The Oxygen style for KDE 5
@@ -30,11 +30,6 @@ BuildRequires: cmake(Gettext)
 BuildRequires: cmake(KF5FrameworkIntegration)
 BuildRequires: cmake(KF5KCMUtils)
 Requires: %{libname} = %{EVRD}
-Provides: oxygen-icon-theme = 1:4.14.4
-Obsoletes: oxygen-icon-theme < 1:4.14.4
-Provides: oxygen-icons = 1:15.04.4
-Obsoletes: oxygen-icons < 1:15.04.4
-Provides: kde4-icon-theme
 
 %description
 The Oxygen style for KDE 5.
