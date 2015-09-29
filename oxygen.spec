@@ -30,6 +30,7 @@ BuildRequires: cmake(Gettext)
 BuildRequires: cmake(KF5FrameworkIntegration)
 BuildRequires: cmake(KF5KCMUtils)
 Requires: %{libname} = %{EVRD}
+Requires: oxygen-icons >= 1:15.04.3
 
 %description
 The Oxygen style for KDE 5.
