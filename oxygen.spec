@@ -66,7 +66,6 @@ rm -f %{buildroot}%{_libdir}/liboxygenstyle%{major}.so
 rm -f %{buildroot}%{_libdir}/liboxygenstyleconfig%{major}.so
 
 %find_lang liboxygenstyleconfig
-%find_lang oxygen_kwin_deco
 %find_lang oxygen_style_config
 %find_lang oxygen_style_demo
 %find_lang oxygen_kdecoration
