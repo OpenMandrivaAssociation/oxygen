@@ -1,0 +1,15 @@
+diff -Naur oxygen-5.5.2/lookandfeel/contents/splash/Splash.qml oxygen-5.5.2.tpg/lookandfeel/contents/splash/Splash.qml
+--- oxygen-5.5.2/lookandfeel/contents/splash/Splash.qml	2015-12-22 10:40:05.000000000 +0000
++++ oxygen-5.5.2.tpg/lookandfeel/contents/splash/Splash.qml	2016-01-07 01:36:33.842561108 +0000
+@@ -37,8 +37,10 @@
+         y: root.height
+         source: "images/rectangle.png"
+         Image {
+-            source: "images/kde.png"
++            source: "/usr/share/icons/openmandriva.svg"
+             anchors.centerIn: parent
++            sourceSize.height: 128
++            sourceSize.width: 128
+         }
+         Rectangle {
+             radius: 3

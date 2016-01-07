@@ -5,15 +5,16 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
+Summary: The Oxygen style for KDE 5
 Name: oxygen
 Version: 5.5.2
-Release: 1
-Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
-Source100: %{name}.rpmlintrc
-Summary: The Oxygen style for KDE 5
+Release: 2
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
+Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
+Source100: %{name}.rpmlintrc
+Patch0: oxygen-5.5.2-use-openmandriva-icon-in-ksplash.patch
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5Widgets)
@@ -31,6 +32,8 @@ BuildRequires: cmake(KF5FrameworkIntegration)
 BuildRequires: cmake(KF5KCMUtils)
 Requires: %{libname} = %{EVRD}
 Requires: oxygen-icons >= 1:15.04.3
+# needed for backgrounds and patch 2
+Requires: distro-theme-OpenMandriva
 
 %description
 The Oxygen style for KDE 5.
@@ -53,6 +56,7 @@ KDE Frameworks 5 Oxygen configuration framework.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build
@@ -60,6 +64,10 @@ KDE Frameworks 5 Oxygen configuration framework.
 
 %install
 %ninja_install -C build
+
+# omv backgrounds
+rm -rf %{buildroot}%{_datadir}/plasma/look-and-feel/org.kde.oxygen/contents/splash/images/background.png
+ln -sf %{_datadir}/mdk/backgrounds/default.png %{buildroot}%{_datadir}/plasma/look-and-feel/org.kde.oxygen/contents/splash/images/background.png
 
 # Useless, we don't have headers
 rm -f %{buildroot}%{_libdir}/liboxygenstyle%{major}.so
