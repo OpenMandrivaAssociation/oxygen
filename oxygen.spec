@@ -8,13 +8,13 @@
 Summary: The Oxygen style for KDE 5
 Name: oxygen
 Version: 5.5.3
-Release: 1
+Release: 2
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
-Patch0: oxygen-5.5.2-use-openmandriva-icon-in-ksplash.patch
+Patch0: oxygen-5.5.3-use-openmandriva-icon-and-background.patch
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5Widgets)
