@@ -73,6 +73,30 @@ ln -sf %{_datadir}/mdk/backgrounds/default.png %{buildroot}%{_datadir}/plasma/lo
 rm -f %{buildroot}%{_libdir}/liboxygenstyle%{major}.so
 rm -f %{buildroot}%{_libdir}/liboxygenstyleconfig%{major}.so
 
+
+# automatic gtk icon cache update on rpm installs/removals
+# (see http://wiki.mandriva.com/en/Rpm_filetriggers)
+install -d %{buildroot}%{_var}/lib/rpm/filetriggers
+cat > %{buildroot}%{_var}/lib/rpm/filetriggers/gtk-icon-cache-plasma-oxygen.filter << EOF
+^./usr/share/icons/KDE_Classic
+^./usr/share/icons/Oxygen_Black
+^./usr/share/icons/Oxygen_Blue
+^./usr/share/icons/Oxygen_White
+^./usr/share/icons/Oxygen_Yellow
+^./usr/share/icons/Oxygen_Zion
+EOF
+
+cat > %{buildroot}%{_var}/lib/rpm/filetriggers/gtk-icon-cache-plasma-oxygen.script << EOF
+#!/bin/sh
+if [ -x /usr/bin/gtk-update-icon-cache ]; then
+    for i in KDE_Classic Oxygen_Black Oxygen_Blue Oxygen_White Oxygen_Yellow Oxygen_Zion; do
+	/usr/bin/gtk-update-icon-cache --force --quiet /usr/share/icons/$i
+    done
+fi
+EOF
+
+chmod 755 %{buildroot}%{_var}/lib/rpm/filetriggers/gtk-icon-cache-plasma-oxygen.script
+
 %find_lang liboxygenstyleconfig
 %find_lang oxygen_style_config
 %find_lang oxygen_style_demo
@@ -97,6 +121,7 @@ cat *.lang >oxygen-all.lang
 %{_libdir}/qt5/plugins/styles/oxygen.so
 %{_libdir}/qt5/plugins/kstyle_oxygen_config.so
 %{_libdir}/qt5/plugins/org.kde.kdecoration2/oxygendecoration.so
+%{_var}/lib/rpm/filetriggers/gtk-icon-cache-oxygen.*
 
 %files -n %{libname}
 %{_libdir}/liboxygenstyle%{major}.so.%{major}*
