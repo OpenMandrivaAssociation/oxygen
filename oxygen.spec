@@ -121,7 +121,7 @@ cat *.lang >oxygen-all.lang
 %{_libdir}/qt5/plugins/styles/oxygen.so
 %{_libdir}/qt5/plugins/kstyle_oxygen_config.so
 %{_libdir}/qt5/plugins/org.kde.kdecoration2/oxygendecoration.so
-%{_var}/lib/rpm/filetriggers/gtk-icon-cache-oxygen.*
+%{_var}/lib/rpm/filetriggers/gtk-icon-cache-plasma-oxygen.*
 
 %files -n %{libname}
 %{_libdir}/liboxygenstyle%{major}.so.%{major}*
