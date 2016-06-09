@@ -8,10 +8,10 @@
 Summary: The Oxygen style for KDE 5
 Name: oxygen
 Version: 5.6.4
-Release: 1
+Release: 2
 URL: http://kde.org/
 License: GPL
-Group: System/Libraries
+Group: Graphical desktop/KDE
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Source100: %{name}.rpmlintrc
 Patch0: oxygen-5.5.3-use-openmandriva-icon-and-background.patch
@@ -37,6 +37,14 @@ Requires: distro-theme-OpenMandriva
 
 %description
 The Oxygen style for KDE 5.
+
+%package sounds
+Summary: Oxygen sounds
+Group: Graphical desktop/KDE
+Conflicts: %{name} < 5.6.4-2
+
+%description sounds
+Oxygen sounds.
 
 %package -n %{libname}
 Summary: KDE Frameworks 5 Oxygen framework
@@ -73,7 +81,6 @@ ln -sf %{_datadir}/mdk/backgrounds/default.png %{buildroot}%{_datadir}/plasma/lo
 rm -f %{buildroot}%{_libdir}/liboxygenstyle%{major}.so
 rm -f %{buildroot}%{_libdir}/liboxygenstyleconfig%{major}.so
 
-
 # automatic gtk icon cache update on rpm installs/removals
 # (see http://wiki.mandriva.com/en/Rpm_filetriggers)
 install -d %{buildroot}%{_var}/lib/rpm/filetriggers
@@ -107,7 +114,6 @@ cat *.lang >oxygen-all.lang
 %files -f oxygen-all.lang
 %{_bindir}/oxygen-demo5
 %{_bindir}/oxygen-settings5
-%{_datadir}/sounds/Oxygen-*.ogg
 %{_iconsdir}/KDE_Classic
 %{_iconsdir}/Oxygen_Black
 %{_iconsdir}/Oxygen_Blue
@@ -122,6 +128,9 @@ cat *.lang >oxygen-all.lang
 %{_libdir}/qt5/plugins/kstyle_oxygen_config.so
 %{_libdir}/qt5/plugins/org.kde.kdecoration2/oxygendecoration.so
 %{_var}/lib/rpm/filetriggers/gtk-icon-cache-plasma-oxygen.*
+
+%files sounds
+%{_datadir}/sounds/Oxygen-*.ogg
 
 %files -n %{libname}
 %{_libdir}/liboxygenstyle%{major}.so.%{major}*
