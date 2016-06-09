@@ -8,7 +8,7 @@
 Summary: The Oxygen style for KDE 5
 Name: oxygen
 Version: 5.6.4
-Release: 2
+Release: 3
 URL: http://kde.org/
 License: GPL
 Group: Graphical desktop/KDE
@@ -32,6 +32,7 @@ BuildRequires: cmake(KF5FrameworkIntegration)
 BuildRequires: cmake(KF5KCMUtils)
 Requires: %{libname} = %{EVRD}
 Requires: oxygen-icons >= 1:15.04.3
+Requires: oxygen-sounds
 # needed for backgrounds and patch 2
 Requires: distro-theme-OpenMandriva
 
