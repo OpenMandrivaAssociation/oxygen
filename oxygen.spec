@@ -7,7 +7,7 @@
 
 Summary: The Oxygen style for KDE 5
 Name: oxygen
-Version: 5.6.5
+Version: 5.7.0
 Release: 1
 URL: http://kde.org/
 License: GPL
@@ -105,10 +105,10 @@ EOF
 
 chmod 755 %{buildroot}%{_var}/lib/rpm/filetriggers/gtk-icon-cache-plasma-oxygen.script
 
-%find_lang liboxygenstyleconfig
-%find_lang oxygen_style_config
-%find_lang oxygen_style_demo
-%find_lang oxygen_kdecoration
+%find_lang liboxygenstyleconfig || touch liboxygenstyleconfig.lang
+%find_lang oxygen_style_config || touch oxygen_style_config.lang
+%find_lang oxygen_style_demo || touch oxygen_style_demo.lang
+%find_lang oxygen_kdecoration || touch oxygen_kdecoration.lang
 
 cat *.lang >oxygen-all.lang
 
