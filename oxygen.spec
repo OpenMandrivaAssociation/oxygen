@@ -30,6 +30,7 @@ BuildRequires: cmake(KDecoration2)
 BuildRequires: cmake(Gettext)
 BuildRequires: cmake(KF5FrameworkIntegration)
 BuildRequires: cmake(KF5KCMUtils)
+BuildRequires: cmake(KF5Wayland)
 Requires: %{libname} = %{EVRD}
 Requires: oxygen-icons >= 1:15.04.3
 Requires: oxygen-sounds
