@@ -17,6 +17,7 @@ Source100: %{name}.rpmlintrc
 Patch0: oxygen-5.5.3-use-openmandriva-icon-and-background.patch
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
+BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(xcb)
