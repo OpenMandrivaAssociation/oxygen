@@ -7,7 +7,7 @@
 
 Summary: The Oxygen style for KDE 5
 Name: oxygen
-Version:	5.16.5
+Version:	5.16.90
 Release:	1
 URL: http://kde.org/
 License: GPL
@@ -117,6 +117,8 @@ cat *.lang >oxygen-all.lang
 %files -f oxygen-all.lang
 %{_bindir}/oxygen-demo5
 %{_bindir}/oxygen-settings5
+%{_datadir}/color-schemes/Oxygen.colors
+%{_datadir}/color-schemes/OxygenCold.colors
 %{_iconsdir}/KDE_Classic
 %{_iconsdir}/Oxygen_Black
 %{_iconsdir}/Oxygen_Blue
