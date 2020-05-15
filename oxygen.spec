@@ -7,7 +7,7 @@
 
 Summary: The Oxygen style for KDE 5
 Name: oxygen
-Version:	5.18.5
+Version:	5.18.90
 Release:	1
 URL: http://kde.org/
 License: GPL
