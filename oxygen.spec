@@ -2,12 +2,11 @@
 %define libname %mklibname oxygenstyle%{major} %{major}
 %define clibname %mklibname oxygenstyleconfig%{major} %{major}
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
-%define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary: The Oxygen style for KDE 5
 Name: oxygen
-Version:	5.21.5
+Version:	5.22.0
 Release:	1
 URL: http://kde.org/
 License: GPL
