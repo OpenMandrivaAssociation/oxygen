@@ -6,8 +6,8 @@
 
 Summary: The Oxygen style for KDE 5
 Name: oxygen
-Version:	5.24.5
-Release:	2
+Version:	5.25.0
+Release:	1
 URL: http://kde.org/
 License: GPL
 Group: Graphical desktop/KDE
@@ -33,20 +33,12 @@ BuildRequires: cmake(KF5KCMUtils)
 BuildRequires: cmake(KF5Wayland)
 Requires: %{libname} = %{EVRD}
 Requires: oxygen-icons >= 1:15.04.3
-Requires: oxygen-sounds
+Recommends: oxygen-sounds
 # needed for backgrounds and patch 2
 Requires: distro-theme-OpenMandriva
 
 %description
 The Oxygen style for KDE 5.
-
-%package sounds
-Summary: Oxygen sounds
-Group: Graphical desktop/KDE
-Conflicts: %{name} < 5.6.4-2
-
-%description sounds
-Oxygen sounds.
 
 %package -n %{libname}
 Summary: KDE Frameworks 5 Oxygen framework
@@ -131,9 +123,6 @@ cat *.lang >oxygen-all.lang
 %{_libdir}/qt5/plugins/kstyle_oxygen_config.so
 %{_libdir}/qt5/plugins/org.kde.kdecoration2/oxygendecoration.so
 %{_var}/lib/rpm/filetriggers/gtk-icon-cache-plasma-oxygen.*
-
-%files sounds
-%{_datadir}/sounds/Oxygen-*.ogg
 
 %files -n %{libname}
 %{_libdir}/liboxygenstyle%{major}.so.%{major}*
