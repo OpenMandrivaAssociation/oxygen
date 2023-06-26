@@ -26,7 +26,7 @@ BuildRequires: cmake(KF5)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5Service)
-BuildRequires: cmake(KDecoration2)
+BuildRequires: cmake(KDecoration2) < 5.27.50
 BuildRequires: cmake(Gettext)
 BuildRequires: cmake(KF5FrameworkIntegration)
 BuildRequires: cmake(KF5KCMUtils)
