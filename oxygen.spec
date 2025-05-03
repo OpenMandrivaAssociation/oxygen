@@ -75,6 +75,8 @@ BuildRequires:	cmake(Qt5Widgets)
 BuildSystem:	cmake
 BuildOption:	-DBUILD_QCH:BOOL=ON
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=true
+# Renamed after 6.0 2025-05-03
+%rename plasma6-oxygen
 
 %description
 The Oxygen style for KDE 6.
@@ -116,6 +118,8 @@ KDE Frameworks 6 Oxygen configuration framework.
 %package qt5
 Summary: Qt 5.x support for the Plasma 6.x Oxygen style
 Requires: %{name} = %{EVRD}
+# Renamed after 6.0 2025-05-03
+%rename plasma6-oxygen-qt5
 
 %description qt5
 Qt 5.x support for the Plasma 6.x Oxygen style
