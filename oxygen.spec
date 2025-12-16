@@ -46,6 +46,7 @@ BuildRequires:	cmake(Wayland) >= 5.90.0
 BuildRequires:	cmake(Plasma) >= 5.90.0
 BuildRequires:	cmake(PlasmaQuick) >= 5.90.0
 %if %{with qt5}
+BuildRequires:	qmake5
 BuildRequires:	cmake(Qt5)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
