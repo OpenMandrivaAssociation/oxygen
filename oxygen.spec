@@ -16,7 +16,7 @@
 
 Summary:	The Oxygen style for KDE 6
 Name:		oxygen
-Version:	6.6.2
+Version:	6.6.3
 Release:	%{?git:0.%{git}.}1
 URL:		https://kde.org/
 License:	GPL
