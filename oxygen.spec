@@ -16,7 +16,7 @@
 
 Summary:	The Oxygen style for KDE 6
 Name:		oxygen
-Version:	6.6.5
+Version:	6.7.0
 Release:	%{?git:0.%{git}.}1
 URL:		https://kde.org/
 License:	GPL
@@ -141,6 +141,7 @@ rm -f %{buildroot}%{_libdir}/liboxygenstyleconfig%{major}.so
 %{_bindir}/oxygen-settings6
 %{_datadir}/color-schemes/Oxygen.colors
 %{_datadir}/color-schemes/OxygenCold.colors
+%{_datadir}/color-schemes/OxygenDark.colors
 %{_iconsdir}/KDE_Classic
 %{_iconsdir}/Oxygen_Black
 %{_iconsdir}/Oxygen_Blue
@@ -149,13 +150,18 @@ rm -f %{buildroot}%{_libdir}/liboxygenstyleconfig%{major}.so
 %{_iconsdir}/Oxygen_Zion
 %{_iconsdir}/hicolor/*/apps/oxygen-settings.png
 %{_datadir}/kstyle/themes/oxygen.*
+%{_datadir}/plasma/look-and-feel/org.kde.air
 %{_datadir}/plasma/look-and-feel/org.kde.oxygen
+%{_datadir}/plasma/look-and-feel/org.kde.oxygenlight
 %{_qtdir}/plugins/styles/oxygen6.so
 %{_qtdir}/plugins/org.kde.kdecoration3/org.kde.oxygen.so
 %{_qtdir}/plugins/kstyle_config/kstyle_oxygen_config.so
 %{_qtdir}/plugins/org.kde.kdecoration3.kcm/kcm_oxygendecoration.so
 %{_datadir}/applications/kcm_oxygendecoration.desktop
+%{_datadir}/plasma/desktoptheme/air
 %{_datadir}/plasma/desktoptheme/oxygen
+%{_datadir}/wallpapers/Air
+%{_datadir}/wallpapers/Horos
 
 %files qt5
 %{_bindir}/oxygen-demo5
